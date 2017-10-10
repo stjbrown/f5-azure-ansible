@@ -1,0 +1,120 @@
+Collecting azure
+  Downloading azure-2.0.0-py2.py3-none-any.whl
+Requirement already up-to-date: azure-keyvault~=0.3.3 in /root/.local/lib/python2.7/site-packages (from azure)
+Collecting azure-batch~=3.0.0 (from azure)
+  Downloading azure_batch-3.0.0-py2.py3-none-any.whl (281kB)
+Collecting azure-servicefabric~=5.6.130 (from azure)
+  Downloading azure_servicefabric-5.6.130-py2.py3-none-any.whl (283kB)
+Requirement already up-to-date: azure-datalake-store~=0.0.9 in /root/.local/lib/python2.7/site-packages (from azure)
+Requirement already up-to-date: azure-storage~=0.34.2 in /root/.local/lib/python2.7/site-packages (from azure)
+Collecting azure-mgmt~=1.0.0 (from azure)
+  Downloading azure_mgmt-1.0.0-py2.py3-none-any.whl
+Collecting azure-graphrbac~=0.30.0 (from azure)
+  Downloading azure_graphrbac-0.30.0-py2.py3-none-any.whl (43kB)
+Collecting azure-servicebus~=0.21.1 (from azure)
+  Downloading azure_servicebus-0.21.1-py2.py3-none-any.whl
+Collecting azure-servicemanagement-legacy~=0.20.6 (from azure)
+  Downloading azure_servicemanagement_legacy-0.20.6-py2.py3-none-any.whl (78kB)
+Requirement already up-to-date: azure-nspkg>=2.0.0 in /root/.local/lib/python2.7/site-packages (from azure-keyvault~=0.3.3->azure)
+Requirement already up-to-date: azure-common~=1.1.5 in /root/.local/lib/python2.7/site-packages (from azure-keyvault~=0.3.3->azure)
+Requirement already up-to-date: msrestazure~=0.4.7 in /root/.local/lib/python2.7/site-packages (from azure-keyvault~=0.3.3->azure)
+Requirement already up-to-date: futures; python_version <= "2.7" in /root/.local/lib/python2.7/site-packages (from azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: msrest~=0.4.5 in /root/.local/lib/python2.7/site-packages (from azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: pathlib2; python_version < "3.4" in /root/.local/lib/python2.7/site-packages (from azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: adal>=0.4.2 in /root/.local/lib/python2.7/site-packages (from azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: cffi in /root/.local/lib/python2.7/site-packages (from azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: cryptography in /usr/lib/python2.7/site-packages (from azure-storage~=0.34.2->azure)
+Requirement already up-to-date: python-dateutil in /root/.local/lib/python2.7/site-packages (from azure-storage~=0.34.2->azure)
+Requirement already up-to-date: requests in /root/.local/lib/python2.7/site-packages (from azure-storage~=0.34.2->azure)
+Collecting azure-mgmt-storage~=1.0.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_storage-1.0.0-py2.py3-none-any.whl (61kB)
+Collecting azure-mgmt-trafficmanager~=0.30.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_trafficmanager-0.30.0-py2.py3-none-any.whl
+Collecting azure-mgmt-sql~=0.5.1 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_sql-0.5.3-py2.py3-none-any.whl (102kB)
+Collecting azure-mgmt-resource~=1.1.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_resource-1.1.0-py2.py3-none-any.whl (301kB)
+Collecting azure-mgmt-scheduler~=1.1.2 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_scheduler-1.1.3-py2.py3-none-any.whl (42kB)
+Requirement already up-to-date: azure-mgmt-monitor~=0.2.1 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-authorization~=0.30.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Collecting azure-mgmt-batch~=4.0.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_batch-4.0.0-py2.py3-none-any.whl
+Requirement already up-to-date: azure-mgmt-cognitiveservices~=1.0.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-datalake-store~=0.1.4 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-devtestlabs~=2.0.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Collecting azure-mgmt-compute~=1.0.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_compute-1.0.0-py2.py3-none-any.whl (379kB)
+Collecting azure-mgmt-containerregistry~=0.2.1 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_containerregistry-0.2.1-py2.py3-none-any.whl
+Requirement already up-to-date: azure-mgmt-rdbms~=0.1.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Collecting azure-mgmt-cdn~=0.30.3 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_cdn-0.30.3-py2.py3-none-any.whl (49kB)
+Collecting azure-mgmt-network~=1.0.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_network-1.0.0-py2.py3-none-any.whl (818kB)
+Requirement already up-to-date: azure-mgmt-iothub~=0.2.2 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-web~=0.32.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-datalake-analytics~=0.1.4 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Collecting azure-mgmt-keyvault~=0.31.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_keyvault-0.31.0-py2.py3-none-any.whl
+Requirement already up-to-date: azure-mgmt-documentdb~=0.1.3 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-redis~=4.1.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-dns~=1.0.1 in /root/.local/lib/python2.7/site-packages (from azure-mgmt~=1.0.0->azure)
+Collecting azure-mgmt-logic~=2.1.0 (from azure-mgmt~=1.0.0->azure)
+  Downloading azure_mgmt_logic-2.1.0-py2.py3-none-any.whl (139kB)
+Requirement already up-to-date: keyring>=5.6 in /root/.local/lib/python2.7/site-packages (from msrestazure~=0.4.7->azure-keyvault~=0.3.3->azure)
+Requirement already up-to-date: certifi>=2017.4.17 in /root/.local/lib/python2.7/site-packages (from msrest~=0.4.5->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: isodate>=0.5.4 in /root/.local/lib/python2.7/site-packages (from msrest~=0.4.5->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: enum34>=1.0.4; python_version < "3.4" in /usr/lib/python2.7/site-packages (from msrest~=0.4.5->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: requests-oauthlib>=0.5.0 in /root/.local/lib/python2.7/site-packages (from msrest~=0.4.5->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: six in /root/.local/lib/python2.7/site-packages (from pathlib2; python_version < "3.4"->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: scandir; python_version < "3.5" in /root/.local/lib/python2.7/site-packages (from pathlib2; python_version < "3.4"->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: PyJWT>=1.0.0 in /root/.local/lib/python2.7/site-packages (from adal>=0.4.2->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: pycparser in /usr/lib/python2.7/site-packages (from cffi->azure-datalake-store~=0.0.9->azure)
+Requirement already up-to-date: idna>=2.1 in /usr/lib/python2.7/site-packages (from cryptography->azure-storage~=0.34.2->azure)
+Requirement already up-to-date: asn1crypto>=0.21.0 in /root/.local/lib/python2.7/site-packages (from cryptography->azure-storage~=0.34.2->azure)
+Requirement already up-to-date: ipaddress in /usr/lib/python2.7/site-packages (from cryptography->azure-storage~=0.34.2->azure)
+Requirement already up-to-date: chardet<3.1.0,>=3.0.2 in /root/.local/lib/python2.7/site-packages (from requests->azure-storage~=0.34.2->azure)
+Requirement already up-to-date: urllib3<1.23,>=1.21.1 in /root/.local/lib/python2.7/site-packages (from requests->azure-storage~=0.34.2->azure)
+Requirement already up-to-date: azure-mgmt-nspkg>=2.0.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt-storage~=1.0.0->azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: azure-mgmt-datalake-nspkg>=2.0.0 in /root/.local/lib/python2.7/site-packages (from azure-mgmt-datalake-store~=0.1.4->azure-mgmt~=1.0.0->azure)
+Requirement already up-to-date: secretstorage; sys_platform == "linux2" or sys_platform == "linux" in /root/.local/lib/python2.7/site-packages (from keyring>=5.6->msrestazure~=0.4.7->azure-keyvault~=0.3.3->azure)
+Requirement already up-to-date: oauthlib>=0.6.2 in /root/.local/lib/python2.7/site-packages (from requests-oauthlib>=0.5.0->msrest~=0.4.5->azure-datalake-store~=0.0.9->azure)
+Installing collected packages: azure-batch, azure-servicefabric, azure-mgmt-storage, azure-mgmt-trafficmanager, azure-mgmt-sql, azure-mgmt-resource, azure-mgmt-scheduler, azure-mgmt-batch, azure-mgmt-compute, azure-mgmt-containerregistry, azure-mgmt-cdn, azure-mgmt-network, azure-mgmt-keyvault, azure-mgmt-logic, azure-mgmt, azure-graphrbac, azure-servicebus, azure-servicemanagement-legacy, azure
+  Found existing installation: azure-batch 4.0.0
+    Uninstalling azure-batch-4.0.0:
+      Successfully uninstalled azure-batch-4.0.0
+  Found existing installation: azure-mgmt-storage 1.2.0
+    Uninstalling azure-mgmt-storage-1.2.0:
+      Successfully uninstalled azure-mgmt-storage-1.2.0
+  Found existing installation: azure-mgmt-trafficmanager 0.40.0
+    Uninstalling azure-mgmt-trafficmanager-0.40.0:
+      Successfully uninstalled azure-mgmt-trafficmanager-0.40.0
+  Found existing installation: azure-mgmt-sql 0.8.1
+    Uninstalling azure-mgmt-sql-0.8.1:
+      Successfully uninstalled azure-mgmt-sql-0.8.1
+  Found existing installation: azure-mgmt-resource 1.2.0rc3
+    Uninstalling azure-mgmt-resource-1.2.0rc3:
+      Successfully uninstalled azure-mgmt-resource-1.2.0rc3
+  Found existing installation: azure-mgmt-batch 4.1.0
+    Uninstalling azure-mgmt-batch-4.1.0:
+      Successfully uninstalled azure-mgmt-batch-4.1.0
+  Found existing installation: azure-mgmt-compute 3.0.1
+    Uninstalling azure-mgmt-compute-3.0.1:
+      Successfully uninstalled azure-mgmt-compute-3.0.1
+  Found existing installation: azure-mgmt-containerregistry 0.3.1
+    Uninstalling azure-mgmt-containerregistry-0.3.1:
+      Successfully uninstalled azure-mgmt-containerregistry-0.3.1
+  Found existing installation: azure-mgmt-cdn 0.30.2
+    Uninstalling azure-mgmt-cdn-0.30.2:
+      Successfully uninstalled azure-mgmt-cdn-0.30.2
+  Found existing installation: azure-mgmt-network 1.5.0rc3
+    Uninstalling azure-mgmt-network-1.5.0rc3:
+      Successfully uninstalled azure-mgmt-network-1.5.0rc3
+  Found existing installation: azure-mgmt-keyvault 0.40.0
+    Uninstalling azure-mgmt-keyvault-0.40.0:
+      Successfully uninstalled azure-mgmt-keyvault-0.40.0
+  Found existing installation: azure-graphrbac 0.31.0
+    Uninstalling azure-graphrbac-0.31.0:
+      Successfully uninstalled azure-graphrbac-0.31.0
+Successfully installed azure-2.0.0 azure-batch-3.0.0 azure-graphrbac-0.30.0 azure-mgmt-1.0.0 azure-mgmt-batch-4.0.0 azure-mgmt-cdn-0.30.3 azure-mgmt-compute-1.0.0 azure-mgmt-containerregistry-0.2.1 azure-mgmt-keyvault-0.31.0 azure-mgmt-logic-2.1.0 azure-mgmt-network-1.0.0 azure-mgmt-resource-1.1.0 azure-mgmt-scheduler-1.1.3 azure-mgmt-sql-0.5.3 azure-mgmt-storage-1.0.0 azure-mgmt-trafficmanager-0.30.0 azure-servicebus-0.21.1 azure-servicefabric-5.6.130 azure-servicemanagement-legacy-0.20.6

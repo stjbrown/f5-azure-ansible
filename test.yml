@@ -1,0 +1,9 @@
+---
+- name: Test Ansible
+  hosts: localhost
+  
+  tasks:
+    - name: create rg
+      azure_rm_resourcegroup:
+        name: testrg
+        location: eastus
