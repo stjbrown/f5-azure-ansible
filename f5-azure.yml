@@ -1,0 +1,7 @@
+# Create or update a template deployment based on uris using parameter and template links
+- name: Create Azure Stack
+  azure_rm_deployment:
+    state: present
+    resource_group_name: f5-demo-rg
+    template_link: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.json'
+    parameters_link: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.parameters.json'
