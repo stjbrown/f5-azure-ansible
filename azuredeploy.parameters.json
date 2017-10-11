@@ -35,13 +35,7 @@
         "vnetAddressPrefix": {
             "value": "10.100"
         }, 
-        "enableNetworkFailover": {
-            "value": "No"
-        }, 
-        "internalLoadBalancerProbePort": {
-            "value": "3456"
-        }, 
-        "ntpServer": {
+	"ntpServer": {
             "value": "0.pool.ntp.org"
         }, 
         "timeZone": {
