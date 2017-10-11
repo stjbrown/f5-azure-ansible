@@ -1,0 +1,11 @@
+---
+- name: create an f5 cluster in azure
+  hosts: localhost
+
+  tasks:
+    - name: Create Azure Stack
+      azure_rm_deployment:
+        state: present
+        resource_group_name: f5-demo-rg
+        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BYOL/azuredeploy.json'
+        parameters_link: 'https://raw.githubusercontent.com/stjbrown/f5-azure-deployment/master/azuredeploy.parameters.json'
