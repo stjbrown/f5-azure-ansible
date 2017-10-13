@@ -6,8 +6,10 @@
   vars:
     resourceGroup: f5demo-rg
     adminPass: ChangeMeNow!!!
-    baseRegKey1: xxxx-xxxx-xxxx
-    baseRegKey2: xxxx-xxx-xxxx
+    bigIqLicenseHost: 129.213.26.209
+    bigIqLicenseUsername: admin
+    bigIqLicensePassword: Enter_BIGIQ_PW_Here
+    bigIqLicensePool: pool1
 
   tasks:
     - name: Create F5 Azure Cluster - New Stack
@@ -32,10 +34,14 @@
             value: 13.0.021
           instanceName: 
             value: f5vm01
-          licenseKey1:
-            value: "{{ baseRegKey1 }}"
-          licenseKey2:
-            value: "{{ baseRegKey2 }}"          
+          bigIqLicenseHost: 
+            value: "{{ bigIqLicenseHost }}"
+          bigIqLicenseUsername:
+            value: "{{ bigIqLicenseUsername }}"
+          bigIqLicensePassword:
+            value: "{{ bigIqLicensePassword }}"
+          bigIqLicensePool:
+            value: "{{ bigIqLicensePool }}"
           numberOfExternalIps:
             value: 2
           vnetAddressPrefix:
@@ -50,4 +56,4 @@
             value: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
           allowUsageAnalytics:
             value: 'Yes' 
-        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BYOL/azuredeploy.json'
+        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BIGIQ/azuredeploy.json'
