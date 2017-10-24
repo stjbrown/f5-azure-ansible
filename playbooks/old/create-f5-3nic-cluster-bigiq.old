@@ -1,0 +1,76 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  
+  vars:
+    #Azure Vars  
+    resourceGroup: f5demo-rg #Azure resource group
+    locaction: eastus #Azure location
+    
+    #Big-IP Vars 
+    adminUsername: f5admin #BIG-IP Admin User
+    adminPassword: ChangeMeNow!!! #BIG-IP Admin Password
+    
+    #BIG-IQ Vars
+    bigIqLicenseHost: 129.213.42.191 #License Server IP Addr
+    bigIqLicenseUsername: admin #License Server Username
+    bigIqLicensePassword: Enter_BIGIQ_PW_Here #License Server Password
+    bigIqLicensePool: pool1 #License Pool Name
+    imageName: Best #BIG-IP Image - Good - Better - Best
+    bigIpVersion: 13.0.021
+    
+    instanceName: f5vm01 #1st instance name
+    instanceType: Standard_DS4_v2 
+    dnsLabel: f5demo #DNS prefix
+    numberOfExternalIps: 2
+    vnetAddressPrefix: '10.0'
+    ntpServer: 0.pool.nt.org
+    timeZone: UTC
+    
+    tasks:
+    - name: Create F5 Azure Cluster - New Stack
+      azure_rm_deployment:
+        state: present
+        resource_group_name: "{{ resourceGroup }}"
+        location: "{{ loaction }} "
+        parameters:
+          adminUsername:
+            value: "{{ adminUsername }}"
+          adminPassword:
+            value: "{{ adminPassword }}"
+          dnsLabel:
+            value: "{{ dnsLabel }}"
+          instanceName:
+            value: "{{ instanceName }}"
+          instanceType:
+            value: "{{ instanceType }}"
+          imageName:
+            value: "{{ imageName }} "
+          bigIpVersion:
+            value: "{{ bigIpVersion }}"
+          instanceName: 
+            value: "{{ instanceName }}"
+          bigIqLicenseHost: 
+            value: "{{ bigIqLicenseHost }}"
+          bigIqLicenseUsername:
+            value: "{{ bigIqLicenseUsername }}"
+          bigIqLicensePassword:
+            value: "{{ bigIqLicensePassword }}"
+          bigIqLicensePool:
+            value: "{{ bigIqLicensePool }}"
+          numberOfExternalIps:
+            value: "{{ numberOfExternalIps }}"
+          vnetAddressPrefix:
+            value: "{{ vnetAddressPrefix }}"
+          ntpServer:
+            value: "{{ ntpServer }}"
+          timeZone:
+            value: "{{ timeZone }}"
+          restrictedSrcAddress:
+            value: '*'
+          tagValues:
+            value: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
+          allowUsageAnalytics:
+            value: 'Yes' 
+        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BIGIQ/azuredeploy.json'

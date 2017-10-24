@@ -27,10 +27,8 @@
             value: "{{ imageName | default('Good') }}"
           bigIpVersion:
             value: "{{ bigIpVersion | default('13.0.021') }}"
-          licenseKey1:
-            value: "{{ licenseKey1 }}"
-          licenseKey2:
-            value: "{{ licenseKey2 }}"
+          licensedBandwidth:
+            value: "{{ licensedBandwidth | default('200m') }}"
           numberOfExternalIps:
             value: "{{ numberOfExternalIps }}"
           vnetAddressPrefix:
@@ -45,4 +43,4 @@
             value: "{{ tagValues | default('') }}"
           allowUsageAnalytics:
             value: "{{ allowUsageAnalytics | default('Yes') }}"
-        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BYOL/azuredeploy.json'
+        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/PAYG/azuredeploy.json'

@@ -1,0 +1,53 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  
+  vars:
+    resourceGroup: f5demo-rg
+    adminPass: ChangeMeNow!!!
+    baseRegKey1: xxxx-xxxx-xxxx
+    baseRegKey2: xxxx-xxx-xxxx
+
+  tasks:
+    - name: Create F5 Azure Cluster - New Stack
+      azure_rm_deployment:
+        state: present
+        resource_group_name: "{{ resourceGroup }}"
+        location: eastus
+        parameters:
+          adminUsername:
+            value: f5admin
+          adminPassword:
+            value: "{{ adminPass }}"
+          dnsLabel:
+            value: f5admin
+          instanceName:
+            value: f5vm01
+          instanceType:
+            value: Standard_DS4_v2
+          imageName:
+            value: Best
+          bigIpVersion:
+            value: 13.0.021
+          instanceName: 
+            value: f5vm01
+          licenseKey1:
+            value: "{{ baseRegKey1 }}"
+          licenseKey2:
+            value: "{{ baseRegKey2 }}"          
+          numberOfExternalIps:
+            value: 2
+          vnetAddressPrefix:
+            value: '10.0'
+          ntpServer:
+            value: 0.pool.ntp.org
+          timeZone:
+            value: UTC 
+          restrictedSrcAddress:
+            value: '*'
+          tagValues:
+            value: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
+          allowUsageAnalytics:
+            value: 'Yes' 
+        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BYOL/azuredeploy.json'

@@ -2,39 +2,32 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  
-  vars:
-    resourceGroup: f5demo-rg
-    adminPass: ChangeMeNow!!!
-    bigIqLicenseHost: 129.213.26.209
-    bigIqLicenseUsername: admin
-    bigIqLicensePassword: Enter_BIGIQ_PW_Here
-    bigIqLicensePool: pool1
 
-  tasks:
+  vars_files:
+   - vars.yml   
+
+    tasks:
     - name: Create F5 Azure Cluster - New Stack
       azure_rm_deployment:
         state: present
         resource_group_name: "{{ resourceGroup }}"
-        location: eastus
+        location: "{{ loaction | default('eastus') }}"
         parameters:
           adminUsername:
-            value: f5admin
+            value: "{{ adminUsername | default('azureuser') }}"
           adminPassword:
-            value: "{{ adminPass }}"
+            value: "{{ adminPassword }}"
           dnsLabel:
-            value: f5admin
+            value: "{{ dnsLabel }}"
           instanceName:
-            value: f5vm01
+            value: "{{ instanceName | default('f5vm01') }}"
           instanceType:
-            value: Standard_DS4_v2
+            value: "{{ instanceType | default('Standard_DS3_v2') }}"
           imageName:
-            value: Best
+            value: "{{ imageName | default('Good') }} "
           bigIpVersion:
-            value: 13.0.021
-          instanceName: 
-            value: f5vm01
-          bigIqLicenseHost: 
+            value: "{{ bigIpVersion | default('13.0.021') }}"
+          bigIqLicenseHost:
             value: "{{ bigIqLicenseHost }}"
           bigIqLicenseUsername:
             value: "{{ bigIqLicenseUsername }}"
@@ -43,17 +36,17 @@
           bigIqLicensePool:
             value: "{{ bigIqLicensePool }}"
           numberOfExternalIps:
-            value: 2
+            value: "{{ numberOfExternalIps | default('1') }}"
           vnetAddressPrefix:
-            value: '10.0'
+            value: "{{ vnetAddressPrefix | default('10.0') }}"
           ntpServer:
-            value: 0.pool.ntp.org
+            value: "{{ ntpServer | default('0.pool.ntp.org') }}"
           timeZone:
-            value: UTC 
+            value: "{{ timeZone | default('UTC') }}"
           restrictedSrcAddress:
-            value: '*'
+            value: "{{ restrictedSrcAddress | default('*') }}"
           tagValues:
-            value: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
+            value: "{{ tagValues | default('{"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}') }}"
           allowUsageAnalytics:
-            value: 'Yes' 
+            value: "{{ allowUsageAnalytics | default('Yes') }}"
         template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BIGIQ/azuredeploy.json'
