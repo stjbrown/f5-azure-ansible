@@ -10,7 +10,7 @@
         resource_group_name: f5-web-app-demo
         parameters:
           repoURL:
-            value: 'https://github.com/Azure-Samples/nodejs-docs-hello-world.git'
+            value: 'https://github.com/stjbrown/nodejs-docs-hello-world'
           siteName:
             value: f5-web-app-demo 
           hostingPlanName:
