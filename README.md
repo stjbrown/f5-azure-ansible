@@ -19,8 +19,9 @@ source start
 ```
 ### Configure Service Principle for use by Azure
 
-Follow the steps below to create a new servcice principle
-https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal
+Follow the link below for a step by step on how to create a new servcice principle
+
+[Create Azure Service Principle](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)
 
 Document the variables below and export them in the container
 
@@ -35,7 +36,7 @@ export AZURE_SUBSCRIPTION_ID=
 In order to deploy with Ansible you must first manually deploy the specific image (Good, Better, Best) and Speed (20M, 200M 1G) 1 time. 
 After initializing  you can move onto running the playbook.
 
-https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FF5Networks%2Ff5-azure-arm-templates%2Fv4.0.0.0%2Fsupported%2Fcluster%2F3nic%2Fnew_stack%2FPAYG%2Fazuredeploy.json
+[Azure ARM Template](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FF5Networks%2Ff5-azure-arm-templates%2Fv4.0.0.0%2Fsupported%2Fcluster%2F3nic%2Fnew_stack%2FPAYG%2Fazuredeploy.json)
 
 #### Choose the required Role
 
@@ -52,10 +53,13 @@ Comment/Un-Comment to choose the role you wish to deploy.
 vi ~/f5-azure-anible/roles/{{choosen role}}/vars/main.yml 
 
 ```
-or specify them at run time by using --extra-vars 
+##### or specify them at run time by using --extra-vars 
 
 
 
 #### Run the playbook 
 
-`ansible-playbook ~/f5-azure-ansible/site.yml -vvvv
+```
+ansible-playbook ~/f5-azure-ansible/site.yml -vvvv
+```
+
