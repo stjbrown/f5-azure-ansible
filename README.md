@@ -1,7 +1,9 @@
 # f5-azure-ansible
 
 This project was created to allow an F5 Azure Stack to be easily built using [F5's ARM Templates](https://github.com/F5Networks/f5-azure-arm-templates) & Ansible. 
-We have choosen to deploy Ansible on top of the [F5 SuperNetops  container](https://github.com/f5devcentral/f5-super-netops-container).
+We have choosen to deploy Ansible on top of the [F5 SuperNetops  container](https://github.com/f5devcentral/f5-super-netops-container) for demonstration purposes.
+
+The steps below will  help boot strap the requirements and playbooks.
 
 ### Deploy the SNOPS Container
 
@@ -35,15 +37,25 @@ After initializing  you can move onto running the playbook.
 
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FF5Networks%2Ff5-azure-arm-templates%2Fv4.0.0.0%2Fsupported%2Fcluster%2F3nic%2Fnew_stack%2FPAYG%2Fazuredeploy.json
 
-#### Edit vars.yaml & run the playbook.
+#### Choose the required Role
 
 ```
-cd ~/f5-azure-ansible/playbooks/
-vi vars.yml
+vi ~/f5-azure-ansible/site.yml 
 ```
 
-Populate the appropriate vars in vars.yml
+Comment/Un-Comment to choose the role you wish to deploy.
+
+### Next edit the var
+
+
+```
+vi ~/f5-azure-anible/roles/{{choosen role}}/vars/main.yml 
+
+```
+or specify them at run time by using --extra-vars 
+
+
 
 #### Run the playbook 
 
-`ansible-playbook create-f5-3nic-cluster-payg.yml -vvvv`
+`ansible-playbook ~/f5-azure-ansible/site.yml -vvvv
