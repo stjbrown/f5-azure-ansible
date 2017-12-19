@@ -1,0 +1,38 @@
+---
+    - name: Create F5 Azure Cluster - New Stack
+      azure_rm_deployment:
+        state: present
+        resource_group_name: "{{ resourceGroup }}"
+        location: "{{ loaction | default('eastus') }}"
+        parameters:
+          adminUsername:
+            value: "{{ adminUsername | default('azureuser') }}"
+          adminPassword:
+            value: "{{ adminPassword }}"
+          dnsLabel:
+            value: "{{ dnsLabel }}"
+          instanceName:
+            value: "{{ instanceName | default('f5vm01') }}"
+          instanceType:
+            value: "{{ instanceType | default('Standard_DS3_v2') }}"
+          imageName:
+            value: "{{ imageName | default('Good') }}"
+          bigIpVersion:
+            value: "{{ bigIpVersion | default('latest') }}"
+          licensedBandwidth:
+            value: "{{ licensedBandwidth | default('200m') }}"
+          numberOfExternalIps:
+            value: "{{ numberOfExternalIps }}"
+          vnetAddressPrefix:
+            value: "{{ vnetAddressPrefix | default('10.0') }}"
+          ntpServer:
+            value: "{{ ntpServer | default('0.pool.ntp.org') }}"
+          timeZone:
+            value: "{{ timeZone | default('UTC') }}"
+          restrictedSrcAddress:
+            value: "{{ restrictedSrcAddress | default('*') }}"
+          tagValues:
+            value: "{{ tagValues | default('') }}"
+          allowUsageAnalytics:
+            value: "{{ allowUsageAnalytics | default('Yes') }}"
+        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/PAYG/azuredeploy.json'
