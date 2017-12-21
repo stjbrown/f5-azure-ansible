@@ -1,0 +1,25 @@
+---
+#Azure Vars
+resourceGroup: f5demo-rg
+dnsLabel: f5demo
+locaction: eastus
+vnetAddressPrefix: '10.100' 
+tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
+
+#BIG-IP Vars
+adminUsername: f5admin
+adminPassword: ChangeMeNow!!!
+
+#Instance Details
+imageName: Best
+instanceType: Standard_DS4_v2
+numberOfExternalIps: 2
+ntpServer: 0.pool.ntp.org
+timeZone: UTC
+
+#BIG-IQ (Only Used for BIG-IQ Deployments)
+bigIqLicenseHost: 129.213.42.191
+bigIqLicenseUsername: admin
+bigIqLicensePassword: Enter_BIGIQ_PW_Here
+bigIqLicensePool: pool1
+

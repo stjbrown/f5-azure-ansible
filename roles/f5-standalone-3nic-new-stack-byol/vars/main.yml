@@ -1,0 +1,22 @@
+---
+#Azure Vars
+resourceGroup: f5demo-rg
+dnsLabel: f5demo
+locaction: eastus
+vnetAddressPrefix: '10.100' 
+tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
+
+#BIG-IP Vars
+adminUsername: f5admin
+adminPassword: ChangeMeNow!!!
+
+#Instance Details
+imageName: Best
+instanceType: Standard_DS4_v2
+numberOfExternalIps: 2
+ntpServer: 0.pool.ntp.org
+timeZone: UTC
+
+#BYOL Vars
+licenseKey1: xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
+
