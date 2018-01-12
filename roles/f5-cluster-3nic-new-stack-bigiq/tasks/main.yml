@@ -3,7 +3,7 @@
       azure_rm_deployment:
         state: present
         resource_group_name: "{{ resourceGroup }}"
-        location: "{{ loaction }}"
+        location: "{{ location }}"
         parameters:
           adminUsername:
             value: "{{ adminUsername }}"
