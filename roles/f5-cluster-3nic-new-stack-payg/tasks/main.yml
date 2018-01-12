@@ -1,38 +1,44 @@
 ---
-    - name: Create F5 Azure Cluster - New Stack
+    - name: Create 3nic PAYG Cluster - New Stack
       azure_rm_deployment:
         state: present
         resource_group_name: "{{ resourceGroup }}"
         location: "{{ loaction | default('eastus') }}"
         parameters:
           adminUsername:
-            value: "{{ adminUsername | default('azureuser') }}"
+            value: "{{ adminUsername }}"
           adminPassword:
             value: "{{ adminPassword }}"
           dnsLabel:
             value: "{{ dnsLabel }}"
           instanceName:
-            value: "{{ instanceName | default('f5vm01') }}"
+            value: "{{ instanceName }}"
           instanceType:
-            value: "{{ instanceType | default('Standard_DS3_v2') }}"
+            value: "{{ instanceType }}"
           imageName:
-            value: "{{ imageName | default('Good') }}"
+            value: "{{ imageName }}"
           bigIpVersion:
-            value: "{{ bigIpVersion | default('latest') }}"
+            value: "{{ bigIpVersion }}"
           licensedBandwidth:
-            value: "{{ licensedBandwidth | default('200m') }}"
+            value: "{{ licensedBandwidth }}"
           numberOfExternalIps:
             value: "{{ numberOfExternalIps }}"
           vnetAddressPrefix:
-            value: "{{ vnetAddressPrefix | default('10.0') }}"
+            value: "{{ vnetAddressPrefix }}"
+          enableNetworkFailover:
+            value: "{{ enableNetworkFailover }}"
+          internalLoadBalancerType:
+            value: "{{ internalLoadBalancerType }}"
+          internalLoadBalancerProbePort:
+            value: "{{ internalLoadBlancerProbePort }}"
           ntpServer:
-            value: "{{ ntpServer | default('0.pool.ntp.org') }}"
+            value: "{{ ntpServer }}"
           timeZone:
-            value: "{{ timeZone | default('UTC') }}"
+            value: "{{ timeZone }}"
           restrictedSrcAddress:
-            value: "{{ restrictedSrcAddress | default('*') }}"
+            value: "{{ restrictedSrcAddress }}"
           tagValues:
-            value: "{{ tagValues | default('') }}"
+            value: "{{ tagValues }}"
           allowUsageAnalytics:
-            value: "{{ allowUsageAnalytics | default('Yes') }}"
+            value: "{{ allowUsageAnalytics }}"
         template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/PAYG/azuredeploy.json'

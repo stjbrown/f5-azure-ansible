@@ -1,2 +1,15 @@
 ---
 # defaults file for f5-standalone-3nic-new-stack-payg
+adminUsername: azureuser
+instanceName: f5vm01
+instanceType: Standard_DS3_v2
+imageName: Good
+bigIpVersion: latest
+licensedBandwidth: 200m
+numberOfExternalIps: 1
+vnetAddressPrefix: 10.0
+ntpServer: 0.pool.ntp.org
+timeZone: UTC
+restrictedSrcAddress: *
+tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
+allowUsageAnalytics: Yes

@@ -1,25 +1,46 @@
 ---
-#Azure Vars
-resourceGroup: f5demo-rg
-dnsLabel: f5demo
-locaction: eastus
-vnetAddressPrefix: '10.100' 
-tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
+#VARs for new 3nic cluster
 
-#BIG-IP Vars
-adminUsername: f5admin
-adminPassword: ChangeMeNow!!!
+#Azure
+resourceGroup: 
+dnsLabel: 
+locaction: 
 
-#Instance Details
-imageName: Best
-instanceType: Standard_DS4_v2
-numberOfExternalIps: 2
-ntpServer: 0.pool.ntp.org
-timeZone: UTC
+#F5 Intance
+#adminUsername:
+adminPassword:
+#dnsLabel:
+#instanceName:
+#instanceType: 
+#imageName: Good | Better | Best
+#bigIpVersion: 13.0.0300 | 12.1.2200 | latest
 
-#BIG-IQ (Only Used for BIG-IQ Deployments)
-bigIqLicenseHost: 129.213.42.191
-bigIqLicenseUsername: admin
-bigIqLicensePassword: Enter_BIGIQ_PW_Here
-bigIqLicensePool: pool1
+#BYOL
+#licenseKey1:  
+#licenseKey2: 
 
+
+#PAYG
+#licensedBandwidth: 1G | 200m | 25m
+
+#BIG-IQ        
+bigIqLicewnseHost: 
+bigIqLicenseUsername:
+bigIqLicensePassword:
+bigIqLicwensePool:
+
+#Network        
+#numberOfExternaslIps:
+#vnetAddressPrefix:
+
+#Cluster        
+#enableNetworkFailover:
+#internalLoadBalancerType:
+#internalLoadBalanceProbePort:
+
+#System                
+#ntpServer:
+#timeZone:
+#restrictedSrvcAddress:
+#tagValues:
+#allowUasgeAnalytics:
