@@ -7,12 +7,12 @@ imageName: Good
 bigIpVersion: latest
 licensedBandwidth: 200m
 numberOfExternalIps: 1
-vnetAddressPrefix: 10.0
-enableNetworkFailover: Yes
+vnetAddressPrefix: '10.0'
+enableNetworkFailover: 'Yes'
 internalLoadBalancerType: Per-protocol
-internalLoadBalancerProbePort: 3456
+internalLoadBalancerProbePort: '3456'
 ntpServer: 0.pool.ntp.org
 timeZone: UTC
-restrictedSrcAddress: *
+restrictedSrcAddress: '*'
 tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
-allowUsageAnalytics: Yes
+allowUsageAnalytics: 'Yes'
