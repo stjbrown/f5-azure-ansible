@@ -7,9 +7,9 @@ imageName: Good
 bigIpVersion: latest
 licensedBandwidth: 200m
 numberOfExternalIps: 1
-vnetAddressPrefix: 10.0
+vnetAddressPrefix: '10.0'
 ntpServer: 0.pool.ntp.org
 timeZone: UTC
 restrictedSrcAddress: *
 tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
-allowUsageAnalytics: Yes
+allowUsageAnalytics: 'Yes'
