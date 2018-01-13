@@ -4,19 +4,19 @@
 #Azure
 resourceGroup: 
 dnsLabel: 
-locaction: 
+location:
 
 #F5 Intance
-#adminUsername:
-adminPassword:
+adminUsername:  
+adminPassword: 
 #dnsLabel:
 #instanceName:
-#instanceType: 
-#imageName: Good | Better | Best
+instanceType: Standard_DS4_v2
+imageName: Best
 #bigIpVersion: 13.0.0300 | 12.1.2200 | latest
 
 #BYOL
-licenseKey1:  
+licenseKey1:   
 licenseKey2: 
 
 
@@ -30,7 +30,7 @@ licenseKey2:
 #bigIqLicwensePool:
 
 #Network        
-#numberOfExternaslIps:
+numberOfExternaslIps: 2
 #vnetAddressPrefix:
 
 #Cluster        
